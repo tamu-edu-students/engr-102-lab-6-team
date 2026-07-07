@@ -61,9 +61,9 @@ The difference is 4.999749998702008e-05
 
 2. **I'm struggling with loops. Any advice?** Before writing your loop, think about what steps you want to repeat and what order they need to go in. What is your stopping condition? Try solving a few iterations by hand and write out every step you take (including decisions). When do you make a decision? That should be an if-else statement. What steps are you repeating? Those should go inside your loop. If you're still struggling, ask for help during class or office hours.
 
-3. **Pyramid area part 2 how do solve the problem without a loop?** Sometimes we don't need a loop because it's inefficient. Sometimes we can write a mathematical expression (equation) to give us the correct answer. For example, the sum of numbers from 1 to $$n$$ is $$\frac{n(n+1)}{2}$$. Can you come up with an equation for this problem?
+3. **Pyramid area part 2 how do I solve the problem without a loop?** Sometimes we don't need a loop because it's inefficient. Sometimes we can write a mathematical expression (equation) to give us the correct answer. For example, the sum of numbers from 1 to $$n$$ is $$\frac{n(n+1)}{2}$$. Can you come up with an equation for this problem?
 
 Have a question you don't see here? Email your instructor!
 
 Based upon Dr. Keyser’s Original<br/>
-Revised Summer 2025 SNR
+Revised Summer 2026 SNR
