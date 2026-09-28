@@ -63,6 +63,8 @@ The difference is 4.999749998702008e-05
 
 3. **Pyramid area part 2 how do I solve the problem without a loop?** Sometimes we don't need a loop because it's inefficient. Sometimes we can write a mathematical expression (equation) to give us the correct answer. For example, the sum of numbers from 1 to $$n$$ is $$\frac{n(n+1)}{2}$$. Can you come up with an equation for this problem?
 
+4. **I'm struggling with series expansions and sums. Do you have more information?** Check out [this page](more_on_sums.md) with an explanation on the math as well as examples with Python code!
+
 Have a question you don't see here? Email your instructor!
 
 Based upon Dr. Keyser’s Original<br/>
