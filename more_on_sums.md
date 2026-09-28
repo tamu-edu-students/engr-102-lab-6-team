@@ -114,7 +114,7 @@ $$\text{erf}(x)=\frac{2}{\sqrt{\pi}}\sum_{n=0}^{\infty}\frac{(-1)^nx^{2n+1}}{n!(
 Example solution using inputs `0.5` and `1e-8`:
 ```python
 # math import statement
-from math import sqrt, pi, factorial, erf
+from math import sqrt, pi, factorial
 
 # get values from the user
 x = float(input("Enter a value for x: "))
@@ -124,17 +124,19 @@ tol = float(input("Enter a value for tolerance: "))
 mysum = 0
 n = 0
 
-# calculate the first term
+# note the 4 components to a loop in the comments below
+# calculate the first term (n=0), 1. initialize control variable
 term = 2 / sqrt(pi) * ((-1) ** n) * (x ** (2 * n + 1)) / (factorial(n) * (2 * n + 1))
 
 # put the stopping (continuation) condition in the while statement
 # keep going if the absolute value of the term is greater than or equal to tol
 # (stop when the absolute value of the term is LESS than tol)
-while abs(term) >= tol:
+while abs(term) >= tol:    # 2. continuation condition
     # add the term to the summation
-    mysum += term
+    mysum += term          # 3. things to do
     # calculate the next term
     n += 1
+    # 4. update control variable
     term = 2 / sqrt(pi) * ((-1) ** n) * (x ** (2 * n + 1)) / (factorial(n) * (2 * n + 1))
 
 # print output
