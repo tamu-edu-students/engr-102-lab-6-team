@@ -28,7 +28,9 @@ $$\cos(x)=\sum_{n=0}^{\infty}\frac{(-1)^nx^{2n}}{(2n)!}=1-\frac{x^2}{2!}+\frac{x
 
 Note: the above summations may only work for a specific range of `x`
 
-Another note: Python uses infinite sums to approximate all of its special functions (in general, more complicated formulae than this)
+Another note: $`n!`$ means the factorial of `n`. The [factorial of an integer](https://en.wikipedia.org/wiki/Factorial) `n` is the product of all integers from `1` to `n`. $`n!=1*2*...*(n-2)*(n-1)*n`$
+
+Yet another note: Python uses infinite sums to approximate all of its special functions (in general, more complicated formulae than this)
 
 ## Using a Loop to Calculate a Sum
 We can use a for loop to add up finite sums. A finite sum has finite (known) starting and stopping points.
