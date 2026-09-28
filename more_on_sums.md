@@ -105,3 +105,45 @@ Using an input of `0.00000001`, the code above will produce the following output
 Please enter a tolerance: 0.00000001
 After 4331 iterations, our value of pi is 3.1415926435942056 while the true value is 3.141592653589793
 ```
+
+## Another example
+Write a Python program that takes as input from the user a floating point number for `x` and a floating point number for tolerance, in that order. Have your program compute the [error function](https://en.wikipedia.org/wiki/Error_function) from the Maclaurin series expansion shown below. Stop the summation when the absolute value of the next term is less than the specified tolerance. Note than `n` starts with a value of zero.
+
+$$\text{erf}(x)=\frac{2}{\sqrt{\pi}}\sum_{n=0}^{\infty}\frac{(-1)^nx^{2n+1}}{n!(2n+1)}$$
+
+Example solution using inputs `0.5` and `1e-8`:
+```python
+# math import statement
+from math import sqrt, pi, factorial, erf
+
+# get values from the user
+x = float(input("Enter a value for x: "))
+tol = float(input("Enter a value for tolerance: "))
+
+# set up loop variables
+mysum = 0
+n = 0
+
+# calculate the first term
+term = 2 / sqrt(pi) * ((-1) ** n) * (x ** (2 * n + 1)) / (factorial(n) * (2 * n + 1))
+
+# put the stopping (continuation) condition in the while statement
+# keep going if the absolute value of the term is greater than or equal to tol
+# (stop when the absolute value of the term is LESS than tol)
+while abs(term) >= tol:
+    # add the term to the summation
+    mysum += term
+    # calculate the next term
+    n += 1
+    term = 2 / sqrt(pi) * ((-1) ** n) * (x ** (2 * n + 1)) / (factorial(n) * (2 * n + 1))
+
+# print output
+print(f"erf({x}) is approximately {mysum}")
+```
+
+Using the inputs `0.5` and `1e-8`, the code above will output:
+```
+Enter a value for x: 0.5
+Enter a value for tolerance: 1e-8
+erf(0.5) is approximately 0.520499878256287
+```
